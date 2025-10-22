@@ -31,6 +31,7 @@ class GenreViewSet(mixins.ListModelMixin,
     serializer_class = GenreSerializer
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
+    http_method_names = ["get", "post"]
 
 
 class ActorViewSet(mixins.ListModelMixin,
@@ -40,6 +41,7 @@ class ActorViewSet(mixins.ListModelMixin,
     serializer_class = ActorSerializer
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
+    http_method_names = ["get", "post"]
 
 
 class CinemaHallViewSet(mixins.ListModelMixin,
@@ -50,6 +52,7 @@ class CinemaHallViewSet(mixins.ListModelMixin,
     serializer_class = CinemaHallSerializer
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
+    http_method_names = ["get", "post"]
 
 
 class MovieViewSet(mixins.ListModelMixin,
